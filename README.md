@@ -6,7 +6,7 @@
 
 RetroGPT is a wrapper around the OpenAIs APIs, allowing us to access them on older web browsers and computers. You can throw away your "MSDOS for Dummies" books; now you can ask ChatGPT how to edit your Autoexec.bat and finally get your SoundBlaster 16 working on your 486, all while nestled in your comfort zone of Windows 3.11 for Workgroups.
 
-![logo](images/image1.png)
+![logo](images/1.png)
 
 RetroGPT is optimized for early to mid-90s web browsers. It should work on most versions of Netscape, Internet Explorer, Opera, and others. The ChatGPT sessions are structured with basic HTML table layouts. The DALL·E 2 images, the raw image is downloaded to a cache on your computer, and a downconverted GIF is sent in its place.
 
