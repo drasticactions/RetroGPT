@@ -1,3 +1,7 @@
+// <copyright file="ChatPage.cs" company="Drastic Actions">
+// Copyright (c) Drastic Actions. All rights reserved.
+// </copyright>
+
 using System.Globalization;
 using OpenAI.GPT3.Managers;
 using OpenAI.GPT3.ObjectModels.RequestModels;
@@ -75,7 +79,7 @@ public class ChatPage : IPage
 
         if (completionResult.Successful)
         {
-            var content = this.templateRenderer.RenderHtml(this.TemplateName, new ChatViewModel() { InitialText = completionResult.Choices.FirstOrDefault()?.Message.Content ?? string.Empty});
+            var content = this.templateRenderer.RenderHtml(this.TemplateName, new ChatViewModel() { InitialText = completionResult.Choices.FirstOrDefault()?.Message.Content ?? string.Empty });
             await context.WriteContentsWithEncodingAsync(content);
         }
         else
@@ -91,8 +95,8 @@ public class ChatPage : IPage
 
     public class ChatViewModel
     {
-        public bool HasResponseText => !string.IsNullOrEmpty(ResponseText);
-        
+        public bool HasResponseText => !string.IsNullOrEmpty(this.ResponseText);
+
         public string InitialText { get; set; } = string.Empty;
 
         public string ResponseText { get; set; } = string.Empty;

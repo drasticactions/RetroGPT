@@ -1,3 +1,7 @@
+// <copyright file="ChatResponsePage.cs" company="Drastic Actions">
+// Copyright (c) Drastic Actions. All rights reserved.
+// </copyright>
+
 using System.Globalization;
 using OpenAI.GPT3.Managers;
 using OpenAI.GPT3.ObjectModels.RequestModels;
@@ -14,7 +18,7 @@ public class ChatResponsePage : IPage
     private HandlebarsTemplateRenderer templateRenderer;
     private OpenAIService service;
     private UAParser.Parser parser;
-    
+
     /// <summary>
     /// Initializes a new instance of the <see cref="ChatResponsePage"/> class.
     /// </summary>
@@ -55,7 +59,7 @@ public class ChatResponsePage : IPage
             {
                 ChatMessage.FromSystem("You are a helpful assistant called RetroGPT, an assistant designed to run on retro computers. " +
                                        $"You speak in the language the user speaks. Format your response as an HTML 2.0 compatible div."),
-                                       ChatMessage.FromAssistant("<div><p>Hello! I'm RetroGPT! What is your question?</p></div>"),
+                ChatMessage.FromAssistant("<div><p>Hello! I'm RetroGPT! What is your question?</p></div>"),
                 ChatMessage.FromUser(prompt!),
             },
             Model = OpenAI.GPT3.ObjectModels.Models.ChatGpt3_5Turbo,
@@ -64,7 +68,7 @@ public class ChatResponsePage : IPage
 
         if (completionResult.Successful)
         {
-            var content = this.templateRenderer.RenderHtml(this.TemplateName, new ChatViewModel() { ResponseText = prompt!, InitialText = completionResult.Choices.FirstOrDefault()?.Message.Content ?? string.Empty});
+            var content = this.templateRenderer.RenderHtml(this.TemplateName, new ChatViewModel() { ResponseText = prompt!, InitialText = completionResult.Choices.FirstOrDefault()?.Message.Content ?? string.Empty });
             await context.WriteContentsWithEncodingAsync(content);
         }
         else
@@ -80,8 +84,8 @@ public class ChatResponsePage : IPage
 
     public class ChatViewModel
     {
-        public bool HasResponseText => !string.IsNullOrEmpty(ResponseText);
-        
+        public bool HasResponseText => !string.IsNullOrEmpty(this.ResponseText);
+
         public string InitialText { get; set; } = string.Empty;
 
         public string ResponseText { get; set; } = string.Empty;

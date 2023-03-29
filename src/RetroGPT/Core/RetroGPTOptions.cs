@@ -1,3 +1,7 @@
+// <copyright file="RetroGPTOptions.cs" company="Drastic Actions">
+// Copyright (c) Drastic Actions. All rights reserved.
+// </copyright>
+
 using System.Text.Json;
 
 namespace RetroGPT.Core;
@@ -16,7 +20,7 @@ public class RetroGPTOptions
         }
 
         var defaultOptions = new RetroGPTOptions();
-        File.WriteAllText(settingsPath, JsonSerializer.Serialize(defaultOptions, new JsonSerializerOptions() { WriteIndented = true}));
+        File.WriteAllText(settingsPath, JsonSerializer.Serialize(defaultOptions, new JsonSerializerOptions() { WriteIndented = true }));
         return defaultOptions;
     }
 }

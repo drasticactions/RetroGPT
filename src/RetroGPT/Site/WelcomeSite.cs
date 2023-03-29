@@ -12,7 +12,7 @@ public class WelcomeSite : ISite
     private HandlebarsTemplateRenderer templateRenderer;
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="RetroGPTSite"/> class.
+    /// Initializes a new instance of the <see cref="WelcomeSite"/> class.
     /// </summary>
     public WelcomeSite()
     {

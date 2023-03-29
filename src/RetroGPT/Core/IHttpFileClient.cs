@@ -6,9 +6,9 @@ namespace RetroGPT.Core;
 
 public interface IHttpFileClient
 {
+    string DefaultDownloadPath { get; }
+
     Task<string> UploadFile(string filePath, MultipartFormDataContent? dataForm = default);
 
     Task<string> DownloadFile(Uri uri, string? downloadPath, string? filename, bool useCache = true);
-
-    string DefaultDownloadPath { get; }
 }

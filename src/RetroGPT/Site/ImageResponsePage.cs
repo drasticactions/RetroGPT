@@ -1,3 +1,7 @@
+// <copyright file="ImageResponsePage.cs" company="Drastic Actions">
+// Copyright (c) Drastic Actions. All rights reserved.
+// </copyright>
+
 using OpenAI.GPT3.Managers;
 using OpenAI.GPT3.ObjectModels;
 using OpenAI.GPT3.ObjectModels.RequestModels;
@@ -12,7 +16,7 @@ public class ImageResponsePage : IPage
 {
     private HandlebarsTemplateRenderer templateRenderer;
     private OpenAIService service;
-    
+
     /// <summary>
     /// Initializes a new instance of the <see cref="ImageResponsePage"/> class.
     /// </summary>
@@ -72,7 +76,7 @@ public class ImageResponsePage : IPage
         public bool HasImage => !string.IsNullOrEmpty(this.ImageUrl);
 
         public string? ImageUrl { get; set; }
-        
+
         public string? Prompt { get; set; }
     }
 }

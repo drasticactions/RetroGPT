@@ -1,3 +1,7 @@
+// <copyright file="HandlebarsTemplateRenderer.cs" company="Drastic Actions">
+// Copyright (c) Drastic Actions. All rights reserved.
+// </copyright>
+
 using HandlebarsDotNet;
 
 namespace RetroGPT.Core;

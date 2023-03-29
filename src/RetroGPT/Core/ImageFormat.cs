@@ -17,20 +17,20 @@ public enum ImageFormat
     /// <summary>
     /// Bitmap.
     /// </summary>
-    bmp,
+    Bmp,
 
     /// <summary>
     /// JPEG.
     /// </summary>
-    jpg,
+    Jpg,
 
     /// <summary>
     /// GIF.
     /// </summary>
-    gif,
+    Gif,
 
     /// <summary>
     /// PNG.
     /// </summary>
-    png,
+    Png,
 }

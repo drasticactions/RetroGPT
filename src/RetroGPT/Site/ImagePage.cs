@@ -1,3 +1,7 @@
+// <copyright file="ImagePage.cs" company="Drastic Actions">
+// Copyright (c) Drastic Actions. All rights reserved.
+// </copyright>
+
 using OpenAI.GPT3.Managers;
 using RetroGPT.Core;
 
@@ -10,7 +14,7 @@ public class ImagePage : IPage
 {
     private HandlebarsTemplateRenderer templateRenderer;
     private OpenAIService service;
-    
+
     /// <summary>
     /// Initializes a new instance of the <see cref="ImagePage"/> class.
     /// </summary>
