@@ -114,6 +114,7 @@ public static class Helpers
         using var md5Instance = MD5.Create();
         using var stream = File.OpenRead(filename);
         var hashResult = md5Instance.ComputeHash(stream);
+        stream.Close();
         return BitConverter.ToString(hashResult).Replace("-", string.Empty).ToLowerInvariant();
     }
 

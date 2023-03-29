@@ -85,4 +85,4 @@ app.MapGet("/RetroGPT/images/{*remander}", fileHandlers.Images);
 app.MapGet("/Welcome/images/{*remander}", fileHandlers.Images);
 
 // TODO: Allow for other ports.
-app.Run("http://*:5001");
+app.Run("http://*:5002");

@@ -97,7 +97,7 @@ public class ImageSharpProxyHandler : IImageProxyHandler
                 break;
         }
 
-        var md5 = Helpers.GenerateKey(result.GeneratedFilePath) ?? string.Empty;
-        return new FileResult(result.GeneratedFilePath, md5);
+        contentStream.Close();
+        return new FileResult(result.GeneratedFilePath, result.Md5);
     }
 }
