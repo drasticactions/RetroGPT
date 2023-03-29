@@ -12,6 +12,8 @@ RetroGPT is optimized for early to mid-90s web browsers. It should work on most 
 
 ## Setup
 
+You can download a compiled version of RetroGPT from the Released Packages here on GitHub.
+
 In order to use RetroGPT, you must edit the included `APITokens.json` file and include your OpenAI Tokens. To get those tokens:
 
 - [Login to the OpenAI site](https://platform.openai.com/account/api-keys), and create a new secret key.
@@ -25,6 +27,8 @@ In order to use RetroGPT, you must edit the included `APITokens.json` file and i
   }
 }
 ```
+
+- Next, run `RetroGPT`. It will start the server. You can connect to it via `http://localhost:5005` on your computer, or on your local area nextwork by using the IP Address of the computer you're running the server on.
 
 # Compile
 
