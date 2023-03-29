@@ -8,7 +8,14 @@ on:
 
 jobs:
   publish:
+
+    strategy:
+      matrix:
+        configuration: [Release]
+        platform: [x64]
+
     runs-on: windows-latest
+
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET
