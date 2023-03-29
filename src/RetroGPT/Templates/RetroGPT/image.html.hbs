@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 2.0//EN">
+<html>
+<head>
+    <title>RetroGPT</title>
+</head>
+<body>
+{{> retro_header_partial }}
+
+{{#if HasImage}}
+    <img src="/proxy/image/{{{ImageUrl}}}&format=gif" />
+    <hr>
+{{/if}}
+
+<form action="/image" method="post">
+    <table bgcolor="#cccccc" width="520">
+        <tr>
+            <td><label for="editor">Image Prompt:</label></td>
+            <td><textarea rows="5" cols="65" id="editor" name="editor">{{Prompt}}</textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Submit"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
