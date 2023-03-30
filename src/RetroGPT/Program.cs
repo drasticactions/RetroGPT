@@ -84,9 +84,6 @@ foreach (var site in SiteSetup.Sites)
 app.MapGet("/RetroGPT/images/{*remander}", fileHandlers.Images);
 app.MapGet("/Welcome/images/{*remander}", fileHandlers.Images);
 
-// TODO: Allow for other ports.
-app.Run("http://*:5005");
-
 Console.WriteLine("RetroGPT is now running! Try accessing it on one of these IP Addresses");
 
 Console.WriteLine("http://127.0.0.1:5005");
@@ -101,3 +98,6 @@ catch (Exception ex)
 {
     // Todo: Ignore for now.
 }
+
+// TODO: Allow for other ports.
+app.Run("http://*:5005");
