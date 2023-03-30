@@ -19,7 +19,7 @@ public class RetroGPTSite : ISite
     public RetroGPTSite(OpenAIService service)
     {
         this.service = service;
-        var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty;
+        var basePath = Path.GetDirectoryName(Helpers.GetAppLocation()) ?? string.Empty;
         var templatePath = Path.Combine(basePath, "Templates", "RetroGPT");
         if (!Directory.Exists(templatePath))
         {
@@ -52,7 +52,7 @@ public class RetroGPTSite : ISite
 
     public void RegisterPartialTemplates()
     {
-        var assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty;
+        var assemblyPath = Path.GetDirectoryName(Helpers.GetAppLocation()) ?? string.Empty;
         var path = Path.Combine(assemblyPath, "Templates", "RetroGPT");
         foreach (var item in Directory.EnumerateFiles(path, "*_partial*"))
         {

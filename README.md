@@ -30,6 +30,10 @@ In order to use RetroGPT, you must edit the included `APITokens.json` file and i
 
 - Next, run `RetroGPT`. It will start the server. You can connect to it via `http://localhost:5005` on your computer, or on your local area nextwork by using the IP Address of the computer you're running the server on.
 
+## Note:
+
+- On Linux and macOS, you may need to make `RetroGPT` executable. To do this, run `chmod a+x RetroGPT` in the RetroGPT directory. Then run `./RetroGPT`
+
 # Compile
 
 RetroGPT is an ASP.NET Core Program. To compile:

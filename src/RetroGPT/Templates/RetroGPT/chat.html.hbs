@@ -4,56 +4,57 @@
     <title>RetroGPT</title>
 </head>
 <body>
-{{> retro_header_partial }}
-{{#if HasResponseText}}
+    {{#if HasResponseText}}
     <table bgcolor="#f2f2f2" width="520" class="chat">
         <tbody>
-        <tr class="chat-header">
-            <td class="user-info">
-            <span class="username">
-                <b>User:</b>
-            </span>
-            </td>
-        </tr>
-        <hr>
-        <tr class="chat-container">
-            <td colspan="2" class="chat-content">
-                <div class="chat-text">{{ResponseText}}</div>
-            </td>
-        </tr>
+            <tr class="chat-header">
+                <td class="user-info">
+                    <span class="username">
+                        <b>User:</b>
+                    </span>
+                </td>
+            </tr>
+            <hr>
+            <tr class="chat-container">
+                <td colspan="2" class="chat-content">
+                    <div class="chat-text">{{ResponseText}}</div>
+                </td>
+            </tr>
         </tbody>
     </table>
-{{/if}}
-<table bgcolor="#cccccc" width="520" class="chat">
-    <tbody>
-    <tr class="chat-header">
-        <td class="user-info">
-            <span class="username">
-                <b>RetroGPT:</b>
-            </span>
-        </td>
-    </tr>
+    {{/if}}
+    <table bgcolor="#cccccc" width="520" class="chat">
+        <tbody>
+            <tr class="chat-header">
+                <td class="user-info">
+                    <span class="username">
+                        <b>RetroGPT:</b>
+                    </span>
+                </td>
+            </tr>
+            <hr>
+            <tr class="chat-container">
+                <td colspan="2" class="chat-content">
+                    <div class="chat-text">{{{InitialText}}}</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table bgcolor="#f2f2f2" width="520">
+        <form action="/chat" method="post">
+        <tr>
+            <td>
+                <textarea rows="5" cols="65" id="editor" name="editor"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Submit">
+            </td>
+        </tr>
+        </form>
+    </table>
     <hr>
-    <tr class="chat-container">
-        <td colspan="2" class="chat-content">
-            <div class="chat-text">{{{InitialText}}}</div>
-        </td>
-    </tr>
-    </tbody>
-</table>
-<table bgcolor="#f2f2f2" width="520">
-    <form action="/chat" method="post">
-    <tr>
-        <td>
-           <textarea rows="5" cols="65" id="editor" name="editor"></textarea>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <input type="submit" value="Submit">
-        </td>
-    </tr>
-    </form>
-</table>
+    {{> retro_header_partial }}
 </body>
 </html>

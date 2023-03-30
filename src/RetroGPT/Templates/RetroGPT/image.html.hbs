@@ -4,23 +4,23 @@
     <title>RetroGPT</title>
 </head>
 <body>
-{{> retro_header_partial }}
-
-{{#if HasImage}}
+    {{#if HasImage}}
     <img src="/proxy/image/{{{ImageUrl}}}&format=gif" />
     <hr>
-{{/if}}
+    {{/if}}
 
-<form action="/image" method="post">
-    <table bgcolor="#cccccc" width="520">
-        <tr>
-            <td><label for="editor">Image Prompt:</label></td>
-            <td>
-                <textarea rows="5" cols="65" id="editor" name="editor">{{Prompt}}</textarea>
-                <input type="submit" value="Submit">
-            </td>
-        </tr>
-    </table>
-</form>
+    <form action="/image" method="post">
+        <table bgcolor="#cccccc" width="520">
+            <tr>
+                <td><label for="editor">Image Prompt:</label></td>
+                <td>
+                    <textarea rows="5" cols="65" id="editor" name="editor">{{Prompt}}</textarea>
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <hr>
+    {{> retro_header_partial }}
 </body>
 </html>

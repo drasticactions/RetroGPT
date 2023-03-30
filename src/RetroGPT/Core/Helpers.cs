@@ -51,6 +51,9 @@ public static class Helpers
         }
     }
 
+    public static string GetAppLocation()
+        => System.AppContext.BaseDirectory;
+
     public static string GetLocalFileViaSites(IList<ISite> sites, string path)
     {
         var splitPath = path.Split(Path.DirectorySeparatorChar, StringSplitOptions.RemoveEmptyEntries);
@@ -71,7 +74,7 @@ public static class Helpers
 
     public static string GetLocalFilePath(string path)
     {
-        var assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
+        var assemblyPath = Path.GetDirectoryName(Helpers.GetAppLocation())!;
         return NormalizePath(Path.Combine(assemblyPath, path));
     }
 

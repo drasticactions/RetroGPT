@@ -16,7 +16,7 @@ public class WelcomeSite : ISite
     /// </summary>
     public WelcomeSite()
     {
-        var basePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty;
+        var basePath = Path.GetDirectoryName(Helpers.GetAppLocation()) ?? string.Empty;
         var templatePath = Path.Combine(basePath, "Templates", "Welcome");
         if (!Directory.Exists(templatePath))
         {

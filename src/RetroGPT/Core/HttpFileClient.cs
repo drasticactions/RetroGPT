@@ -24,7 +24,7 @@ public class HttpFileClient : IHttpFileClient
     {
         this.httpClient = client ?? this.GenerateClient();
         this.logger = logger ?? default;
-        var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty;
+        var path = Path.GetDirectoryName(Helpers.GetAppLocation()) ?? string.Empty;
         this.defaultDownloadPath = Path.Combine(path, defaultDownloadPath ?? "Downloads");
         Directory.CreateDirectory(this.defaultDownloadPath);
     }
