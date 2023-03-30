@@ -1,4 +1,4 @@
-# RetroGPT - The IE 3 Compatible ChatGPT Client.
+# RetroGPT - The IE 4 Compatible ChatGPT Client.
 
 ![1444070256569233](https://user-images.githubusercontent.com/898335/167266846-1ad2648f-91c1-4a04-a18d-6dd4d6c7d21c.gif)
 
@@ -34,7 +34,7 @@ In order to use RetroGPT, you must edit the included `APITokens.json` file and i
 
 ## Note:
 
-- On Linux and macOS, you may need to make `RetroGPT` executable. To do this, run `chmod a+x RetroGPT` in the RetroGPT directory. Then run `./RetroGPT`
+- On Linux, you may need to make `RetroGPT` executable. To do this, run `chmod a+x RetroGPT` in the RetroGPT directory. Then run `./RetroGPT`
 
 ## Compile:
 
