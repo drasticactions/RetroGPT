@@ -10,7 +10,6 @@
   <ItemGroup>
     <PackageReference Include="Betalgo.OpenAI.GPT3" Version="6.8.3" />
     <PackageReference Include="Handlebars.Net" Version="2.1.4" />
-    <PackageReference Include="Sharprompt" Version="2.4.5" />
     <PackageReference Include="SixLabors.ImageSharp" Version="2.1.4" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
     <PackageReference Include="UAParser" Version="3.1.47" />
@@ -38,7 +37,6 @@
     <None Update="Templates\RetroGPT\Images\retrogpt.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Content Remove="APITokens.json" />
     <None Include="APITokens.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

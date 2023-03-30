@@ -10,7 +10,9 @@ RetroGPT is a wrapper around the OpenAIs APIs, allowing us to access them on old
 
 RetroGPT is optimized for early to mid-90s web browsers. It should work on most versions of Netscape, Internet Explorer, Opera, and others. The ChatGPT sessions are structured with basic HTML table layouts. The DALL·E 2 images, the raw image is downloaded to a cache on your computer, and a downconverted GIF is sent in its place.
 
-## Setup
+![logo](images/2.png)
+
+## Setup:
 
 You can download a compiled version of RetroGPT from the Released Packages here on GitHub.
 
@@ -34,10 +36,17 @@ In order to use RetroGPT, you must edit the included `APITokens.json` file and i
 
 - On Linux and macOS, you may need to make `RetroGPT` executable. To do this, run `chmod a+x RetroGPT` in the RetroGPT directory. Then run `./RetroGPT`
 
-# Compile
+## Compile:
 
 RetroGPT is an ASP.NET Core Program. To compile:
 
 - Clone this repository
 - Install the [.NET 7 or later](https://dotnet.microsoft.com/en-us/download/dotnet) SDK
 - From the `src` directory, run `dotnet build` and `dotnet run`.
+
+## Libraries used:
+
+- Betalgo.OpenAI.GPT3
+- Handlebars.Net
+- SixLabors.ImageSharp
+- UAParser
